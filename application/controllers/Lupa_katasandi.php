@@ -25,8 +25,8 @@ class Lupa_katasandi extends CI_Controller
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
-                $mail->Username = 'kp.informatika.unib@gmail.com';
-                $mail->Password = 'informatika.unib123';
+                $mail->Username = 'test@gmail.com';
+                $mail->Password = 'test123';
                 $mail->SMTPOptions = array(
                     'ssl' => array(
                         'verify_peer' => false,
@@ -37,11 +37,11 @@ class Lupa_katasandi extends CI_Controller
                 $mail->SMTPSecure = 'ssl';
                 $mail->Port = 465;
 
-                $mail->setFrom('kp.informatika.unib@gmail.com');
+                $mail->setFrom('test@gmail.com');
 
                 //Recipients
                 $mail->addAddress($email);
-                $mail->addReplyTo('kp.informatika.unib@gmail.com');
+                $mail->addReplyTo('test@gmail.com');
 
                 //Content
                 if ($type == 'forgot') {
