@@ -7,8 +7,8 @@ class Lupa_katasandi extends CI_Controller
         $config = [
             'protocol'      => 'smtp',
             'smptp_host'    => 'smtp.gmail.com',
-            'smtp_user'     => 'kp.informatika.unib@gmail.com',
-            'smtp_pass'     => 'informatika.unib123',
+            'smtp_user'     => 'test@gmail.com',
+            'smtp_pass'     => 'test123',
             'smtp_port'     => 465,
             'mailtype'      => 'html',
             'charset'       => 'utf-8',
@@ -17,7 +17,7 @@ class Lupa_katasandi extends CI_Controller
         $this->load->library('email', $config);
         $this->email->initialize($config);
 
-        $this->email->from('kp.informatika.unib@gmail.com', 'Koordinator KP ');
+        $this->email->from('test@gmail.com', 'Koordinator KP ');
         $this->email->to($this->input->post('email'));
 
         if ($type == 'forgot') {
